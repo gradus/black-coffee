@@ -10,9 +10,18 @@ app.router.get '/', ->
     doctype 5
     html ->
       head ->
-        title 'Foo'
+        title 'I like my Coffee Back'
+        style '''
+          body {
+            font-family: sans-serif; 
+            background-color:black; color:#ffffff;
+            margin: 40px;
+          }
+          header, nav, section, footer {display: block}
+        '''
+        
       body ->
-        h1 'Welcome to Iron-Coffee'
-        h3 'CoffeeScript Flatiron http server template!'
-
+        h1 'Welcome to Black -Coffee'
+        h4 'Built w/ CoffeeScript Flatiron http server template!'
+        a href: 'https://github.com/twilson63/iron-coffee', -> 'iron-coffee'
 app.start 3000
