@@ -17,6 +17,7 @@ app.router.get '/', ->
             background-color:black; color:#ffffff;
             margin: 40px;
           }
+          a, a:visited, a:hover { color:white;}
           header, nav, section, footer {display: block}
         '''
         

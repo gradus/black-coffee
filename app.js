@@ -20,7 +20,7 @@
       return html(function() {
         head(function() {
           title('I like my Coffee Black');
-          return style('body {\n  font-family: sans-serif; \n  background-color:black; color:#ffffff;\n  margin: 40px;\n}\nheader, nav, section, footer {display: block}');
+          return style('body {\n  font-family: sans-serif; \n  background-color:black; color:#ffffff;\n  margin: 40px;\n}\na, a:visited, a:hover { color:white;}\nheader, nav, section, footer {display: block}');
         });
         return body(function() {
           h1('Welcome to Black -Coffee');
