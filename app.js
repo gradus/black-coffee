@@ -1,37 +1,40 @@
-var app, coffeecup, flatiron;
+(function() {
+  var app, coffeecup, flatiron;
 
-require('coffee-script');
+  require('coffee-script');
 
-coffeecup = require('coffeecup');
+  coffeecup = require('coffeecup');
 
-flatiron = require('flatiron');
+  flatiron = require('flatiron');
 
-app = flatiron.app;
+  app = flatiron.app;
 
-app.use(flatiron.plugins.http);
+  app.use(flatiron.plugins.http);
 
-app.router.get('/', function() {
-  this.res.writeHead(200, {
-    'Content-Type': 'text/html'
-  });
-  return this.res.end(coffeecup.render(function() {
-    doctype(5);
-    return html(function() {
-      head(function() {
-        title('I like my Coffee Back');
-        return style('body {\n  font-family: sans-serif; \n  background-color:black; color:#ffffff;\n  margin: 40px;\n}\nheader, nav, section, footer {display: block}');
-      });
-      return body(function() {
-        h1('Welcome to Black -Coffee');
-        h4('Built w/ CoffeeScript Flatiron http server template!');
-        return a({
-          href: 'https://github.com/twilson63/iron-coffee'
-        }, function() {
-          return 'iron-coffee';
+  app.router.get('/', function() {
+    this.res.writeHead(200, {
+      'Content-Type': 'text/html'
+    });
+    return this.res.end(coffeecup.render(function() {
+      doctype(5);
+      return html(function() {
+        head(function() {
+          title('I like my Coffee Black');
+          return style('body {\n  font-family: sans-serif; \n  background-color:black; color:#ffffff;\n  margin: 40px;\n}\nheader, nav, section, footer {display: block}');
+        });
+        return body(function() {
+          h1('Welcome to Black -Coffee');
+          h4('Built w/ CoffeeScript Flatiron http server template!');
+          return a({
+            href: 'https://github.com/twilson63/iron-coffee'
+          }, function() {
+            return 'iron-coffee';
+          });
         });
       });
-    });
-  }));
-});
+    }));
+  });
 
-app.start(3000);
+  app.start(3000);
+
+}).call(this);

@@ -10,7 +10,7 @@ app.router.get '/', ->
     doctype 5
     html ->
       head ->
-        title 'I like my Coffee Back'
+        title 'I like my Coffee Black'
         style '''
           body {
             font-family: sans-serif; 

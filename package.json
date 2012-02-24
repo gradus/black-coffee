@@ -2,17 +2,18 @@
   "author": "Tom Wilson <tom@jackhq.com> (http://www.jackhq.com)",
   "name": "iron-coffee",
   "description": "A flatiron coffee-script template",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "repository": {
     "type": "git",
     "url": "git://github.com/twilson63/iron-coffee.git"
   },
   "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "server.js"
   },
   "engines": {
-    "node": "0.6 || 0.7 || 0.8"
+    "node": "0.4 || 0.6 || 0.7 || 0.8"
   },
   "dependencies": {
     "flatiron": "0.1.13",
@@ -24,5 +25,6 @@
     "mocha": "0.12.1",
     "should": "0.5.1",
     "request": "*"
-  }
+  },
+  "subdomain": "black-coffee"
 }
