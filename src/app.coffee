@@ -18,11 +18,18 @@ app.router.get '/', ->
             margin: 40px;
           }
           a, a:visited, a:hover { color:white;}
+          p { color: white }
           header, nav, section, footer {display: block}
         '''
         
       body ->
-        h1 'Welcome to Black -Coffee'
+        h1 'Black Coffee'
+        h3 'I like my coffee black'
         h4 'Built w/ CoffeeScript Flatiron http server template!'
-        a href: 'https://github.com/twilson63/iron-coffee', -> 'iron-coffee'
+        p ->
+          text 'using '
+          a href: 'https://github.com/twilson63/iron-coffee', -> 'iron-coffee'
+          text ' as the template'
+        img src: "http://static.flickr.com/44/143391932_886e771618.jpg"
 app.start 3000
+console.log 'listening on port 3000'

@@ -20,15 +20,23 @@
       return html(function() {
         head(function() {
           title('I like my Coffee Black');
-          return style('body {\n  font-family: sans-serif; \n  background-color:black; color:#ffffff;\n  margin: 40px;\n}\na, a:visited, a:hover { color:white;}\nheader, nav, section, footer {display: block}');
+          return style('body {\n  font-family: sans-serif; \n  background-color:black; color:#ffffff;\n  margin: 40px;\n}\na, a:visited, a:hover { color:white;}\np { color: white }\nheader, nav, section, footer {display: block}');
         });
         return body(function() {
-          h1('Welcome to Black -Coffee');
+          h1('Black Coffee');
+          h3('I like my coffee black');
           h4('Built w/ CoffeeScript Flatiron http server template!');
-          return a({
-            href: 'https://github.com/twilson63/iron-coffee'
-          }, function() {
-            return 'iron-coffee';
+          p(function() {
+            text('using ');
+            a({
+              href: 'https://github.com/twilson63/iron-coffee'
+            }, function() {
+              return 'iron-coffee';
+            });
+            return text(' as the template');
+          });
+          return img({
+            src: "http://static.flickr.com/44/143391932_886e771618.jpg"
           });
         });
       });
@@ -36,5 +44,7 @@
   });
 
   app.start(3000);
+
+  console.log('listening on port 3000');
 
 }).call(this);
