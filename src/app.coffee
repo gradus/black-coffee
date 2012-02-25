@@ -1,6 +1,4 @@
-require 'coffee-script'
 coffeecup = require 'coffeecup'
-
 flatiron = require 'flatiron'
 app = flatiron.app
 app.use flatiron.plugins.http

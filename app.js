@@ -1,7 +1,7 @@
 (function() {
   var app, coffeecup, flatiron;
 
-  require('coffee-script');
+  //require('coffee-script');
 
   coffeecup = require('coffeecup');
 
