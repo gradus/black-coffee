@@ -51,7 +51,8 @@ app.router.get '/', ->
             a href: 'https://github.com/twilson63/iron-coffee', -> 'iron-coffee'
             text ', a '
             a href: 'http://coffeescript.org/', -> 'CoffeeScript'
-            text ' '
+            br()
+            text ' and '
             a href: 'http://http://flatironjs.org/', -> 'Flatiron'
             text ' http server template.'
           img class: 'fade_img', src: "http://static.flickr.com/44/143391932_886e771618.jpg"

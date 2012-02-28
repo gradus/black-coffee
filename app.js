@@ -66,7 +66,8 @@
               }, function() {
                 return 'CoffeeScript';
               });
-              text(' ');
+              br();
+              text(' and ');
               a({
                 href: 'http://http://flatironjs.org/'
               }, function() {

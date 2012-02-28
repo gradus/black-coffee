@@ -2,7 +2,7 @@
   "author": "Tom Wilson <tom@jackhq.com> (http://www.jackhq.com)",
   "name": "iron-coffee",
   "description": "A flatiron coffee-script template",
-  "version": "0.0.1-6",
+  "version": "0.0.1-7",
   "repository": {
     "type": "git",
     "url": "git://github.com/twilson63/iron-coffee.git"
