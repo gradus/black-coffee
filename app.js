@@ -54,7 +54,7 @@
             p({
               "class": 'text'
             }, function() {
-              text('Built with ');
+              text('Built w/ ');
               a({
                 href: 'https://github.com/twilson63/iron-coffee'
               }, function() {
@@ -80,7 +80,8 @@
               src: "http://static.flickr.com/44/143391932_886e771618.jpg"
             });
             return p({
-              "class": 'credits'
+              "class": 'credits',
+              style: 'float:right;padding-right:210px;'
             }, function() {
               text('created by ');
               return a({

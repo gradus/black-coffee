@@ -47,7 +47,7 @@ app.router.get '/', ->
           h1 class: 'black_coffee', -> 'Black Coffee'
           h3 class: 'like_it_black', -> '"I like my coffee black"'
           p class: 'text', ->
-            text 'Built with '
+            text 'Built w/ '
             a href: 'https://github.com/twilson63/iron-coffee', -> 'iron-coffee'
             text ', a '
             a href: 'http://coffeescript.org/', -> 'CoffeeScript'
@@ -57,7 +57,7 @@ app.router.get '/', ->
             text ' http server template.'
           img class: 'fade_img', src: "http://static.flickr.com/44/143391932_886e771618.jpg"
 
-          p class: 'credits', ->
+          p class: 'credits', style: 'float:right;padding-right:210px;', ->
             text 'created by '
             a href: 'http://github.com/gradus', -> 'Kris Windham'
 
