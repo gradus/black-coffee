@@ -18,6 +18,10 @@
       return html(function() {
         head(function() {
           title('I like my Coffee Black');
+          meta({
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=0.7, maximum-scale=0.8'
+          });
           script({
             src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
           });
@@ -81,7 +85,7 @@
             });
             return p({
               "class": 'credits',
-              style: 'float:right;padding-right:210px;'
+              style: 'float:right;padding-right:230px;'
             }, function() {
               text('created by ');
               return a({

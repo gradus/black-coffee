@@ -9,6 +9,7 @@ app.router.get '/', ->
     html ->
       head ->
         title 'I like my Coffee Black'
+        meta name: 'viewport', content: 'width=device-width, initial-scale=0.7, maximum-scale=0.8'
         script src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
         style '''
           body {
@@ -57,7 +58,7 @@ app.router.get '/', ->
             text ' http server template.'
           img class: 'fade_img', src: "http://static.flickr.com/44/143391932_886e771618.jpg"
 
-          p class: 'credits', style: 'float:right;padding-right:210px;', ->
+          p class: 'credits', style: 'float:right;padding-right:230px;', ->
             text 'created by '
             a href: 'http://github.com/gradus', -> 'Kris Windham'
 
