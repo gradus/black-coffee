@@ -2,7 +2,7 @@
   "author": "Tom Wilson <tom@jackhq.com> (http://www.jackhq.com)",
   "name": "iron-coffee",
   "description": "A flatiron coffee-script template",
-  "version": "0.0.1-4",
+  "version": "0.0.1-5",
   "repository": {
     "type": "git",
     "url": "git://github.com/twilson63/iron-coffee.git"
@@ -19,7 +19,8 @@
     "flatiron": "0.1.13",
     "union": "0.1.7",
     "coffee-script": "1.2.0",
-    "coffeecup": "0.3.5-2"
+    "coffeecup": "*",
+    "uglify-js": "*"
   },
   "devDependencies": {
     "mocha": "0.12.1",

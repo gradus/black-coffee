@@ -1,8 +1,6 @@
 (function() {
   var app, coffeecup, flatiron;
 
-  //require('coffee-script');
-
   coffeecup = require('coffeecup');
 
   flatiron = require('flatiron');
@@ -20,23 +18,64 @@
       return html(function() {
         head(function() {
           title('I like my Coffee Black');
-          return style('body {\n  font-family: sans-serif; \n  background-color:black; color:#ffffff;\n  margin: 40px;\n}\na, a:visited, a:hover { color:white;}\np { color: white }\nheader, nav, section, footer {display: block}');
+          script({
+            src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
+          });
+          style('body {\n  font-family: sans-serif;\n  background-color:black; \n  color:whitesmoke;\n  margin: 30px 30px;\n  padding: 0px;\n  text-align: center;\n}\n#wrap {\n  width:500px;\n  margin:0px auto;\n  text-align:left;\n}\na, a:visited, a:hover { color:white;}\np { color: white }\nheader, nav, section, footer {display: block}');
+          return coffeescript(function() {
+            return $(document).ready(function() {
+              $('.black_coffee').hide();
+              $('.like_it_black').hide();
+              $('.text').hide();
+              $('.fade_img').hide();
+              $('.black_coffee').fadeIn(1000);
+              $('.like_it_black').fadeIn(3000);
+              $('.text').fadeIn(4000);
+              return $('.fade_img').fadeIn(8000);
+            });
+          });
         });
         return body(function() {
-          h1('Black Coffee');
-          h3('I like my coffee black');
-          h4('Built w/ CoffeeScript Flatiron http server template!');
-          p(function() {
-            text('using ');
-            a({
-              href: 'https://github.com/twilson63/iron-coffee'
+          return div({
+            id: 'wrap'
+          }, function() {
+            h1({
+              "class": 'black_coffee'
             }, function() {
-              return 'iron-coffee';
+              return 'Black Coffee';
             });
-            return text(' as the template');
-          });
-          return img({
-            src: "http://static.flickr.com/44/143391932_886e771618.jpg"
+            h3({
+              "class": 'like_it_black'
+            }, function() {
+              return '"I like my coffee black"';
+            });
+            p({
+              "class": 'text'
+            }, function() {
+              text('Built with ');
+              a({
+                href: 'https://github.com/twilson63/iron-coffee'
+              }, function() {
+                return 'iron-coffee';
+              });
+              text(', a ');
+              a({
+                href: 'http://coffeescript.org/'
+              }, function() {
+                return 'CoffeeScript';
+              });
+              text(' ');
+              a({
+                href: 'http://http://flatironjs.org/'
+              }, function() {
+                return 'Flatiron';
+              });
+              return text(' http server template.');
+            });
+            return img({
+              "class": 'fade_img',
+              src: "http://static.flickr.com/44/143391932_886e771618.jpg"
+            });
           });
         });
       });

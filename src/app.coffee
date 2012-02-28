@@ -9,25 +9,51 @@ app.router.get '/', ->
     html ->
       head ->
         title 'I like my Coffee Black'
+        script src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
         style '''
           body {
-            font-family: sans-serif; 
-            background-color:black; color:#ffffff;
-            margin: 40px;
+            font-family: sans-serif;
+            background-color:black; 
+            color:whitesmoke;
+            margin: 30px 30px;
+            padding: 0px;
+            text-align: center;
+          }
+          #wrap {
+            width:500px;
+            margin:0px auto;
+            text-align:left;
           }
           a, a:visited, a:hover { color:white;}
           p { color: white }
           header, nav, section, footer {display: block}
         '''
-        
+        coffeescript ->
+          $(document).ready ->
+            $('.black_coffee').hide()
+            $('.like_it_black').hide()
+            $('.text').hide()
+            $('.fade_img').hide()
+            $('.black_coffee').fadeIn(1000)
+            $('.like_it_black').fadeIn(3000)
+            $('.text').fadeIn(4000)
+            $('.fade_img').fadeIn(8000)
+
+
       body ->
-        h1 'Black Coffee'
-        h3 'I like my coffee black'
-        h4 'Built w/ CoffeeScript Flatiron http server template!'
-        p ->
-          text 'using '
-          a href: 'https://github.com/twilson63/iron-coffee', -> 'iron-coffee'
-          text ' as the template'
-        img src: "http://static.flickr.com/44/143391932_886e771618.jpg"
+        div id: 'wrap', ->
+          h1 class: 'black_coffee', -> 'Black Coffee'
+          h3 class: 'like_it_black', -> '"I like my coffee black"'
+          p class: 'text', ->
+            text 'Built with '
+            a href: 'https://github.com/twilson63/iron-coffee', -> 'iron-coffee'
+            text ', a '
+            a href: 'http://coffeescript.org/', -> 'CoffeeScript'
+            text ' '
+            a href: 'http://http://flatironjs.org/', -> 'Flatiron'
+            text ' http server template.'
+          img class: 'fade_img', src: "http://static.flickr.com/44/143391932_886e771618.jpg"
 app.start 3000
 console.log 'listening on port 3000'
+
+
