@@ -28,10 +28,12 @@
               $('.like_it_black').hide();
               $('.text').hide();
               $('.fade_img').hide();
+              $('.credits').hide();
               $('.black_coffee').fadeIn(1000);
               $('.like_it_black').fadeIn(3000);
               $('.text').fadeIn(4000);
-              return $('.fade_img').fadeIn(8000);
+              $('.fade_img').fadeIn(8000);
+              return $('.credits').fadeIn(10000);
             });
           });
         });
@@ -72,9 +74,19 @@
               });
               return text(' http server template.');
             });
-            return img({
+            img({
               "class": 'fade_img',
               src: "http://static.flickr.com/44/143391932_886e771618.jpg"
+            });
+            return p({
+              "class": 'credits'
+            }, function() {
+              text('created by ');
+              return a({
+                href: 'http://github.com/gradus'
+              }, function() {
+                return 'Kris Windham';
+              });
             });
           });
         });

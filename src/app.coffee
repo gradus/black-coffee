@@ -34,10 +34,12 @@ app.router.get '/', ->
             $('.like_it_black').hide()
             $('.text').hide()
             $('.fade_img').hide()
+            $('.credits').hide()
             $('.black_coffee').fadeIn(1000)
             $('.like_it_black').fadeIn(3000)
             $('.text').fadeIn(4000)
             $('.fade_img').fadeIn(8000)
+            $('.credits').fadeIn(10000)
 
 
       body ->
@@ -53,6 +55,11 @@ app.router.get '/', ->
             a href: 'http://http://flatironjs.org/', -> 'Flatiron'
             text ' http server template.'
           img class: 'fade_img', src: "http://static.flickr.com/44/143391932_886e771618.jpg"
+
+          p class: 'credits', ->
+            text 'created by '
+            a href: 'http://github.com/gradus', -> 'Kris Windham'
+
 app.start 3000
 console.log 'listening on port 3000'
 
