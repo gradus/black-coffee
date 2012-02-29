@@ -26,3 +26,12 @@ build = (watch, callback) ->
 task 'build', -> build -> log ":)", green
 
 task 'watch', -> build true, -> log ":)", green
+
+test = (callback) ->
+  spec = spawn './node_modules/mocha/bin/mocha'
+  spec.stdout.on 'data', (data) -> print data.toString()
+  spec.stderr.on 'data', (data) -> log data.toString(), red
+  spec.on 'exit', (status) -> callback?() if status is 0
+
+task 'test', ->
+  test -> console.log 'Done!'
