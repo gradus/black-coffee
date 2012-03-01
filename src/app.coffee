@@ -5,7 +5,7 @@ ecstatic = require 'ecstatic'
 app = flatiron.app
 app.use flatiron.plugins.http
 app.http.before = [
-  ecstatic(__dirname + '/assets', { autoIndex : off })
+  ecstatic(__dirname + '/assets', { autoIndex : off, cache: on })
 ]
 
 indexPage = ''

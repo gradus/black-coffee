@@ -14,7 +14,8 @@ app.use(flatiron.plugins.http);
 
 app.http.before = [
   ecstatic(__dirname + '/assets', {
-    autoIndex: false
+    autoIndex: false,
+    cache: true
   })
 ];
 

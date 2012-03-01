@@ -6,19 +6,6 @@ html ->
     script src: '/javascripts/jquery.min.js'
     link rel: 'stylesheet', href: '/stylesheets/app.css'
 
-    coffeescript ->
-      $(document).ready ->
-        $('.black_coffee').hide()
-        $('.like_it_black').hide()
-        $('.text').hide()
-        $('.fade_img').hide()
-        $('.credits').hide()
-        $('.black_coffee').fadeIn(1000)
-        $('.like_it_black').fadeIn(3000)
-        $('.text').fadeIn(4000)
-        $('.fade_img').fadeIn(8000)
-        $('.credits').fadeIn(10000)
-
   body ->
     div id: 'wrap', ->
       h1 class: 'black_coffee', -> 'Black Coffee'
@@ -37,3 +24,16 @@ html ->
       p class: 'credits', style: 'float:right;padding-right:230px;', ->
         text 'created by '
         a href: 'http://github.com/gradus', -> 'Kris Windham'
+
+    coffeescript ->
+      $(document).ready ->
+        $('.black_coffee').hide()
+        $('.like_it_black').hide()
+        $('.text').hide()
+        $('.fade_img').hide()
+        $('.credits').hide()
+        $('.black_coffee').fadeIn(1000)
+        $('.like_it_black').fadeIn(3000)
+        $('.text').fadeIn(4000)
+        $('.fade_img').fadeIn(8000)
+        $('.credits').fadeIn(10000)

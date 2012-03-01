@@ -1,11 +1,11 @@
 {
-  "author": "Tom Wilson <tom@jackhq.com> (http://www.jackhq.com)",
-  "name": "iron-coffee",
+  "author": "Kris Windham <kriswindham@gmail.com> (http://krwindham.nodejitsu.com)",
+  "name": "black-coffee",
   "description": "A flatiron coffee-script template",
-  "version": "0.0.1-12",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
-    "url": "git://github.com/twilson63/iron-coffee.git"
+    "url": "git://github.com/gradus/black-coffee.git"
   },
   "main": "server.js",
   "scripts": {
