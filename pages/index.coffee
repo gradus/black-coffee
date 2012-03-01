@@ -23,7 +23,7 @@ html ->
 
       p class: 'credits', style: 'float:right;padding-right:230px;', ->
         text 'created by '
-        a href: 'http://github.com/gradus', -> 'Kris Windham'
+        a href: 'http://gradus.github.com/', -> 'Kris Windham'
 
     coffeescript ->
       $(document).ready ->
