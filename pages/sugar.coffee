@@ -2,7 +2,7 @@ doctype 5
 html ->
   head ->
     title 'I like my Coffee With a little Sugar'
-    meta name: 'viewport', content: 'width=device-width, initial-scale=0.7, maximum-scale=0.8'
+    meta name: 'viewport', content: 'width=device-width, initial-scale=0.4, maximum-scale=0.55'
     script src: '/javascripts/jquery.min.js'
     link rel: 'stylesheet', href: '/stylesheets/sugar.css'
 
