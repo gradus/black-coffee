@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  background-color:black; 
+  color:whitesmoke;
+  margin: 30px 30px;
+  padding: 0px;
+  text-align: center;
+}
+
+#wrap {
+  width:500px;
+  margin:0px auto;
+  text-align:left;
+}
+
+a, a:visited, a:hover { 
+  color:whitesmoke;
+}
+
+p { color: whitesmoke }
+
+header, nav, section, footer {
+  display: block
+}
+
