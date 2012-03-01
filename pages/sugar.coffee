@@ -5,6 +5,7 @@ html ->
     meta name: 'viewport', content: 'width=device-width, initial-scale=0.6, maximum-scale=0.55'
     script src: '/javascripts/jquery.min.js'
     link rel: 'stylesheet', href: '/stylesheets/sugar.css'
+    link rel: 'shortcut icon', href: '/images/favicon.ico'
 
   body ->
     div id: 'wrap', ->
