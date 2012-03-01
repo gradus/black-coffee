@@ -6,23 +6,22 @@ comment '[if (gte IE 9)|!(IE)]><!'
 html lang: 'en', ->
   comment '<![endif]'
   head ->
-    comment 'Basic Page Needs\r\n  =================================================='
     meta charset: 'utf-8'
     title 'Black Skeleton Coffee'
-    meta name: 'description', content: ''
+    meta name: 'description', content: 'Skeleton Layout'
     meta name: 'author', content: ''
-    comment 'Mobile Specific Metas\r\n  =================================================='
+
     meta name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'
-    comment 'CSS\r\n  =================================================='
+    
     link rel: 'stylesheet', href: 'stylesheets/base.css'
     link rel: 'stylesheet', href: 'stylesheets/skeleton.css'
     link rel: 'stylesheet', href: 'stylesheets/layout.css'
+    link rel: 'stylesheet', href: 'stylesheets/sugar.css'
+
+
     comment '[if lt IE 9]>\r\n\t\t<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>\r\n\t<![endif]'
-    comment 'Favicons\r\n\t=================================================='
+
     link rel: 'shortcut icon', href: 'images/favicon.ico'
-    link rel: 'apple-touch-icon', href: 'images/apple-touch-icon.png'
-    link rel: 'apple-touch-icon', sizes: '72x72', href: 'images/apple-touch-icon-72x72.png'
-    link rel: 'apple-touch-icon', sizes: '114x114', href: 'images/apple-touch-icon-114x114.png'
   body ->
     comment 'Primary Page Layout\r\n\t=================================================='
     comment 'Delete everything in this .container and get started on your own site!'
@@ -58,8 +57,8 @@ html lang: 'en', ->
           a href: 'mailto:hi@getskeleton.com', 'hi@getskeleton.com'
           text '.'
     comment 'container'
+
     comment 'JS\r\n\t=================================================='
     script src: 'http://code.jquery.com/jquery-1.7.1.min.js'
     script src: 'javascripts/tabs.js'
-    comment 'End Document\r\n=================================================='
 
