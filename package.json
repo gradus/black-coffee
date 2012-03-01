@@ -20,7 +20,8 @@
     "union": "0.1.7",
     "coffee-script": "1.2.0",
     "coffeecup": "*",
-    "uglify-js": "*"
+    "uglify-js": "*",
+    "ecstatic": "*"
   },
   "devDependencies": {
     "mocha": "0.12.1",
