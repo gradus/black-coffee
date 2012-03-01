@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+  background-color:whitesmoke; 
+  color:#171717;
+  margin: 30px 30px;
+  padding: 0px;
+  text-align: center;
+}
+
+#wrap {
+  width:500px;
+  margin:0px auto;
+  text-align:left;
+}
+
+a, a:visited, a:hover { 
+  color:#171717;
+}
+
+p { color: #171717 }
+
+header, nav, section, footer {
+  display: block
+}
