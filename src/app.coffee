@@ -12,6 +12,8 @@ indexPage = ''
 fs.readFile('./pages/index.coffee', 'utf8', (err,data) -> indexPage += data)
 sugarPage = ''
 fs.readFile('./pages/sugar.coffee', 'utf8', (err,data) -> sugarPage += data)
+skeletonPage = ''
+fs.readFile('./pages/skeleton.coffee', 'utf8', (err,data) -> skeletonPage += data)
 
 
 app.router.get '/', ->
@@ -21,6 +23,10 @@ app.router.get '/', ->
 app.router.get '/sugar', ->
   @res.writeHead 200, 'Content-Type': 'text/html'
   @res.end coffeecup.render(sugarPage)
+
+app.router.get '/skeleton', ->
+  @res.writeHead 200, 'Content-Type': 'text/html'
+  @res.end coffeecup.render(skeletonPage)
 
 app.start 3000
 console.log 'listening on port 3000'

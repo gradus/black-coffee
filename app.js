@@ -1,4 +1,4 @@
-var app, coffeecup, ecstatic, flatiron, fs, indexPage, sugarPage;
+var app, coffeecup, ecstatic, flatiron, fs, indexPage, skeletonPage, sugarPage;
 
 coffeecup = require('coffeecup');
 
@@ -31,6 +31,12 @@ fs.readFile('./pages/sugar.coffee', 'utf8', function(err, data) {
   return sugarPage += data;
 });
 
+skeletonPage = '';
+
+fs.readFile('./pages/skeleton.coffee', 'utf8', function(err, data) {
+  return skeletonPage += data;
+});
+
 app.router.get('/', function() {
   this.res.writeHead(200, {
     'Content-Type': 'text/html'
@@ -43,6 +49,13 @@ app.router.get('/sugar', function() {
     'Content-Type': 'text/html'
   });
   return this.res.end(coffeecup.render(sugarPage));
+});
+
+app.router.get('/skeleton', function() {
+  this.res.writeHead(200, {
+    'Content-Type': 'text/html'
+  });
+  return this.res.end(coffeecup.render(skeletonPage));
 });
 
 app.start(3000);
