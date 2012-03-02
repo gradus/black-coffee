@@ -28,7 +28,7 @@ html ->
       p class: 'credits', style: 'float:left;', ->
         a href: 'http://easydoc.org/blackcoffee', -> 'black-coffee docs'
 
-      p class: 'credits', style: 'float:right;padding-right:230px;', ->
+      p class: 'credits', style: 'float:right;padding-right:180px;', ->
         text 'created by '
         a href: 'http://gradus.github.com/', -> 'Kris Windham'
 
