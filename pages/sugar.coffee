@@ -23,12 +23,10 @@ html ->
         text ' and '
         a href: 'http://http://flatironjs.org/', -> 'Flatiron'
         text ' http server template.'
+
       img class: 'fade_img', src: "/images/coffeesugar.jpg"
 
-      p class: 'credits', style: 'float:left;', ->
-        a href: 'http://easydoc.org/blackcoffee', -> 'black-coffee docs'
-
-      p class: 'credits', style: 'float:right;padding-right:180px;', ->
+      p class: 'credits', style: 'float:right;padding-right:230px;', ->
         text 'created by '
         a href: 'http://gradus.github.com/', -> 'Kris Windham'
 
