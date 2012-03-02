@@ -27,7 +27,7 @@ html ->
       img height: '300px', class: 'fade_img', src: "/images/coffeemoon.jpg"
 
       p class: 'credits', style: 'float:left;', ->
-        a href: 'http://gradus.github.com/', -> 'black-coffee docs'
+        a href: 'http://easydoc.org/blackcoffee', -> 'black-coffee docs'
 
       p class: 'credits', style: 'float:right;padding-right:180px;', ->
         text 'created by '
