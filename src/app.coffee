@@ -1,32 +1,25 @@
 coffeecup = require 'coffeecup'
-fs = require 'fs'
+creamer = require 'creamer'
 flatiron = require 'flatiron'
 ecstatic = require 'ecstatic'
+
 app = flatiron.app
 app.use flatiron.plugins.http
 app.http.before = [
   ecstatic(__dirname + '/assets', { autoIndex : off, cache: on })
 ]
 
-indexPage = ''
-fs.readFile('./pages/index.coffee', 'utf8', (err,data) -> indexPage += data)
-sugarPage = ''
-fs.readFile('./pages/sugar.coffee', 'utf8', (err,data) -> sugarPage += data)
-skeletonPage = ''
-fs.readFile('./pages/skeleton.coffee', 'utf8', (err,data) -> skeletonPage += data)
+app.use creamer
 
+view = (name) -> "#{__dirname}/pages/#{name}"
 
-app.router.get '/', ->
-  @res.writeHead 200, 'Content-Type': 'text/html'
-  @res.end coffeecup.render(indexPage)
+index = require view("index")
+sugar = require view("sugar")
+skeleton = require view("skeleton")
 
-app.router.get '/sugar', ->
-  @res.writeHead 200, 'Content-Type': 'text/html'
-  @res.end coffeecup.render(sugarPage)
-
-app.router.get '/skeleton', ->
-  @res.writeHead 200, 'Content-Type': 'text/html'
-  @res.end coffeecup.render(skeletonPage)
+app.router.get '/', -> @res.html app.render(@res, index, home: '.active')
+app.router.get '/sugar', -> @res.html app.render(@res, sugar, home: '.active')
+app.router.get '/skeleton', -> @res.html app.render(@res, sugar, home: '.active')
 
 app.start 3000
 console.log 'listening on port 3000'

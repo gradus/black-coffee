@@ -1,8 +1,8 @@
-var app, coffeecup, ecstatic, flatiron, fs, indexPage, skeletonPage, sugarPage;
+var app, coffeecup, creamer, ecstatic, flatiron, index, skeleton, sugar, view;
 
 coffeecup = require('coffeecup');
 
-fs = require('fs');
+creamer = require('creamer');
 
 flatiron = require('flatiron');
 
@@ -19,43 +19,34 @@ app.http.before = [
   })
 ];
 
-indexPage = '';
+app.use(creamer);
 
-fs.readFile('./pages/index.coffee', 'utf8', function(err, data) {
-  return indexPage += data;
-});
+view = function(name) {
+  return "" + __dirname + "/pages/" + name;
+};
 
-sugarPage = '';
+index = require(view("index"));
 
-fs.readFile('./pages/sugar.coffee', 'utf8', function(err, data) {
-  return sugarPage += data;
-});
+sugar = require(view("sugar"));
 
-skeletonPage = '';
-
-fs.readFile('./pages/skeleton.coffee', 'utf8', function(err, data) {
-  return skeletonPage += data;
-});
+skeleton = require(view("skeleton"));
 
 app.router.get('/', function() {
-  this.res.writeHead(200, {
-    'Content-Type': 'text/html'
-  });
-  return this.res.end(coffeecup.render(indexPage));
+  return this.res.html(app.render(this.res, index, {
+    home: '.active'
+  }));
 });
 
 app.router.get('/sugar', function() {
-  this.res.writeHead(200, {
-    'Content-Type': 'text/html'
-  });
-  return this.res.end(coffeecup.render(sugarPage));
+  return this.res.html(app.render(this.res, sugar, {
+    home: '.active'
+  }));
 });
 
 app.router.get('/skeleton', function() {
-  this.res.writeHead(200, {
-    'Content-Type': 'text/html'
-  });
-  return this.res.end(coffeecup.render(skeletonPage));
+  return this.res.html(app.render(this.res, sugar, {
+    home: '.active'
+  }));
 });
 
 app.start(3000);
