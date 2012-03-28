@@ -3,7 +3,7 @@ module.exports = function() {
   doctype(5);
   return html(function() {
     head(function() {
-      title('I like my Coffee Black');
+      title(this.title);
       meta({
         name: 'viewport',
         content: 'width=device-width, initial-scale=0.7, maximum-scale=1'
@@ -18,13 +18,44 @@ module.exports = function() {
       });
       link({
         rel: 'stylesheet',
-        href: '/stylesheets/app.css'
+        href: "/stylesheets/" + this.css + ".css"
       });
-      return link({
+      link({
         rel: 'shortcut icon',
         href: '/images/favicon.ico'
       });
+      script({
+        src: '/javascripts/jquery.min.js'
+      });
+      return script({
+        src: 'javascripts/tabs.js'
+      });
     });
-    return content();
+    return body(function() {
+      return div('.container', function() {
+        return div({
+          id: 'wrap'
+        }, function() {
+          ul('.tabs', function() {
+            li(function() {
+              return a(this.black || '', {
+                href: '/'
+              }, 'Black');
+            });
+            li(function() {
+              return a(this.sugar || '', {
+                href: '/sugar'
+              }, 'Sugar');
+            });
+            return li(function() {
+              return a(this.cream || '', {
+                href: '/cream'
+              }, 'Cream');
+            });
+          });
+          return content();
+        });
+      });
+    });
   });
 };

@@ -36,15 +36,27 @@ cream = require(view("cream"));
 skeleton = require(view("skeleton"));
 
 app.router.get('/', function() {
-  return this.res.html(app.render(this.res, index));
+  return this.res.html(app.render(this.res, index, {
+    black: '.active',
+    css: "app",
+    title: "I like my Coffee Black"
+  }));
 });
 
 app.router.get('/sugar', function() {
-  return this.res.html(app.render(this.res, sugar));
+  return this.res.html(app.render(this.res, sugar, {
+    sugar: '.active',
+    css: "sugar",
+    title: "I like my Coffee With a little Sugar"
+  }));
 });
 
 app.router.get('/cream', function() {
-  return this.res.html(app.render(this.res, cream));
+  return this.res.html(app.render(this.res, cream, {
+    cream: '.active',
+    css: "app",
+    title: "I like my Coffee with a splash of creamer"
+  }));
 });
 
 app.router.get('/skeleton', function() {

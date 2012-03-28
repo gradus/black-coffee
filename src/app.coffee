@@ -18,9 +18,12 @@ sugar = require view("sugar")
 cream = require view("cream")
 skeleton = require view("skeleton")
 
-app.router.get '/', -> @res.html app.render(@res, index)
-app.router.get '/sugar', -> @res.html app.render(@res, sugar)
-app.router.get '/cream', -> @res.html app.render(@res, cream)
+app.router.get '/', ->
+  @res.html app.render(@res, index, black: '.active', css: "app", title: "I like my Coffee Black")
+app.router.get '/sugar', ->
+  @res.html app.render(@res, sugar, sugar: '.active', css: "sugar", title: "I like my Coffee With a little Sugar")
+app.router.get '/cream', ->
+  @res.html app.render(@res, cream, cream: '.active', css: "app", title: "I like my Coffee with a splash of creamer")
 
 app.router.get '/skeleton', -> @res.html app.render(@res, skeleton)
 
