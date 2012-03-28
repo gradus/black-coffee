@@ -1,4 +1,4 @@
-var app, coffeecup, creamer, ecstatic, flatiron, index, skeleton, sugar, view;
+var app, coffeecup, cream, creamer, ecstatic, flatiron, index, skeleton, sugar, view;
 
 coffeecup = require('coffeecup');
 
@@ -29,24 +29,24 @@ index = require(view("index"));
 
 sugar = require(view("sugar"));
 
+cream = require(view("cream"));
+
 skeleton = require(view("skeleton"));
 
 app.router.get('/', function() {
-  return this.res.html(app.render(this.res, index, {
-    home: '.active'
-  }));
+  return this.res.html(app.render(this.res, index));
 });
 
 app.router.get('/sugar', function() {
-  return this.res.html(app.render(this.res, sugar, {
-    home: '.active'
-  }));
+  return this.res.html(app.render(this.res, sugar));
+});
+
+app.router.get('/cream', function() {
+  return this.res.html(app.render(this.res, cream));
 });
 
 app.router.get('/skeleton', function() {
-  return this.res.html(app.render(this.res, skeleton, {
-    home: '.active'
-  }));
+  return this.res.html(app.render(this.res, skeleton));
 });
 
 app.start(3000);

@@ -16,19 +16,17 @@ module.exports = ->
             a '.active', href: '/', 'Black'
           li ->
             a href: '/sugar', 'Sugar'
+          li ->
+            a href: '/cream', 'Cream'
 
         div id: 'wrap', ->
           h1 class: 'black_coffee', -> 'Black Coffee'
           h4 class: 'like_it_black', -> '"I like my coffee black"'
           p class: 'text', ->
             text 'Built w/ '
-            a href: 'https://github.com/twilson63/iron-coffee', -> 'iron-coffee'
-            text ', a '
             a href: 'http://coffeescript.org/', -> 'CoffeeScript'
-            br()
             text ' and '
             a href: 'http://http://flatironjs.org/', -> 'Flatiron'
-            text ' http server template.'
 
           img height: '300px', class: 'fade_img', src: "/images/coffeemoon.jpg"
 

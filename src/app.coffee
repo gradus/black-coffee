@@ -15,11 +15,14 @@ view = (name) -> "#{__dirname}/pages/#{name}"
 
 index = require view("index")
 sugar = require view("sugar")
+cream = require view("cream")
 skeleton = require view("skeleton")
 
-app.router.get '/', -> @res.html app.render(@res, index, home: '.active')
-app.router.get '/sugar', -> @res.html app.render(@res, sugar, home: '.active')
-app.router.get '/skeleton', -> @res.html app.render(@res, skeleton, home: '.active')
+app.router.get '/', -> @res.html app.render(@res, index)
+app.router.get '/sugar', -> @res.html app.render(@res, sugar)
+app.router.get '/cream', -> @res.html app.render(@res, cream)
+
+app.router.get '/skeleton', -> @res.html app.render(@res, skeleton)
 
 app.start 3000
 console.log 'listening on port 3000'

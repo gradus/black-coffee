@@ -33,10 +33,15 @@ module.exports = function() {
               href: '/'
             }, 'Black');
           });
-          return li(function() {
+          li(function() {
             return a({
               href: '/sugar'
             }, 'Sugar');
+          });
+          return li(function() {
+            return a({
+              href: '/cream'
+            }, 'Cream');
           });
         });
         div({
@@ -57,24 +62,16 @@ module.exports = function() {
           }, function() {
             text('Built w/ ');
             a({
-              href: 'https://github.com/twilson63/iron-coffee'
-            }, function() {
-              return 'iron-coffee';
-            });
-            text(', a ');
-            a({
               href: 'http://coffeescript.org/'
             }, function() {
               return 'CoffeeScript';
             });
-            br();
             text(' and ');
-            a({
+            return a({
               href: 'http://http://flatironjs.org/'
             }, function() {
               return 'Flatiron';
             });
-            return text(' http server template.');
           });
           img({
             height: '300px',
