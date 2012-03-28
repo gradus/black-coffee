@@ -19,7 +19,9 @@ app.http.before = [
   })
 ];
 
-app.use(creamer);
+app.use(creamer, {
+  layout: require(__dirname + '/pages/layout')
+});
 
 view = function(name) {
   return "" + __dirname + "/pages/" + name;
