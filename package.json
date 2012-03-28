@@ -2,7 +2,7 @@
   "author": "Kris Windham <kriswindham@gmail.com> (http://krwindham.nodejitsu.com)",
   "name": "black-coffee",
   "description": "A flatiron coffee-script template",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "repository": {
     "type": "git",
     "url": "git://github.com/gradus/black-coffee.git"

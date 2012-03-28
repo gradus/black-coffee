@@ -27,26 +27,26 @@ module.exports = function() {
     });
     return body(function() {
       return div('.container', function() {
-        ul('.tabs', function() {
-          li(function() {
-            return a({
-              href: '/'
-            }, 'Black');
-          });
-          li(function() {
-            return a({
-              href: '/sugar'
-            }, 'Sugar');
-          });
-          return li(function() {
-            return a('.active', {
-              href: '/cream'
-            }, 'Cream');
-          });
-        });
         div({
           id: 'wrap'
         }, function() {
+          ul('.tabs', function() {
+            li(function() {
+              return a({
+                href: '/'
+              }, 'Black');
+            });
+            li(function() {
+              return a({
+                href: '/sugar'
+              }, 'Sugar');
+            });
+            return li(function() {
+              return a('.active', {
+                href: '/cream'
+              }, 'Cream');
+            });
+          });
           h1({
             "class": 'black_coffee'
           }, function() {

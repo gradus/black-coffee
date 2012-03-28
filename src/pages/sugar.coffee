@@ -10,15 +10,14 @@ module.exports = ->
       link rel: 'shortcut icon', href: '/images/favicon.ico'
     body ->
       div '.container', ->
-        ul '.tabs', ->
-          li ->
-            a href: '/', 'Black'
-          li ->
-            a '.active', href: '/sugar', 'Sugar'
-          li ->
-            a href: '/cream', 'Cream'
-
         div id: 'wrap', ->
+          ul '.tabs', ->
+            li ->
+              a href: '/', 'Black'
+            li ->
+              a '.active', href: '/sugar', 'Sugar'
+            li ->
+              a href: '/cream', 'Cream'
           h1 class: 'black_coffee', -> 'Black Coffee'
           h4 class: 'little_sugar', -> 'with a little sugar'
           p class: 'text', ->

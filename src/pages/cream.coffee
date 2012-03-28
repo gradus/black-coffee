@@ -11,15 +11,14 @@ module.exports = ->
 
     body ->
       div '.container', ->
-        ul '.tabs', ->
-          li ->
-            a href: '/', 'Black'
-          li ->
-            a href: '/sugar', 'Sugar'
-          li ->
-            a '.active', href: '/cream', 'Cream'
-
         div id: 'wrap', ->
+          ul '.tabs', ->
+            li ->
+              a href: '/', 'Black'
+            li ->
+              a href: '/sugar', 'Sugar'
+            li ->
+              a '.active', href: '/cream', 'Cream'
           h1 class: 'black_coffee', -> 'Black Coffee'
           h4 class: 'like_it_with_cream', -> '"sometimes with a splash of cream"'
           p class: 'text', ->
