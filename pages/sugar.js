@@ -8,8 +8,13 @@ module.exports = function() {
         name: 'viewport',
         content: 'width=device-width, initial-scale=0.6, maximum-scale=0.55'
       });
-      script({
-        src: '/javascripts/jquery.min.js'
+      link({
+        rel: 'stylesheet',
+        href: 'stylesheets/base.css'
+      });
+      link({
+        rel: 'stylesheet',
+        href: 'stylesheets/skeleton.css'
       });
       link({
         rel: 'stylesheet',
@@ -21,78 +26,91 @@ module.exports = function() {
       });
     });
     return body(function() {
-      div({
-        id: 'wrap'
-      }, function() {
-        h1({
-          "class": 'black_coffee'
+      return div('.container', function() {
+        ul('.tabs', function() {
+          li(function() {
+            return a({
+              href: '/'
+            }, 'Black');
+          });
+          return li(function() {
+            return a('.active', {
+              href: '/sugar'
+            }, 'Sugar');
+          });
+        });
+        div({
+          id: 'wrap'
         }, function() {
-          return 'Black Coffee';
-        });
-        h4({
-          "class": 'little_sugar'
-        }, function() {
-          return 'with a little sugar';
-        });
-        p({
-          "class": 'text'
-        }, function() {
-          a({
-            href: '/'
+          h1({
+            "class": 'black_coffee'
           }, function() {
-            return '...or just plain black';
+            return 'Black Coffee';
           });
-          br();
-          br();
-          text('Built w/ ');
-          a({
-            href: 'https://github.com/gradus/black-coffee'
+          h4({
+            "class": 'little_sugar'
           }, function() {
-            return 'black-coffee';
+            return 'with a little sugar';
           });
-          text(', a ');
-          a({
-            href: 'http://coffeescript.org/'
+          p({
+            "class": 'text'
           }, function() {
-            return 'CoffeeScript';
+            text('Built w/ ');
+            a({
+              href: 'https://github.com/gradus/black-coffee'
+            }, function() {
+              return 'black-coffee';
+            });
+            text(', a ');
+            a({
+              href: 'http://coffeescript.org/'
+            }, function() {
+              return 'CoffeeScript';
+            });
+            br();
+            text(' and ');
+            a({
+              href: 'http://http://flatironjs.org/'
+            }, function() {
+              return 'Flatiron';
+            });
+            return text(' http server template.');
           });
-          br();
-          text(' and ');
-          a({
-            href: 'http://http://flatironjs.org/'
-          }, function() {
-            return 'Flatiron';
+          img({
+            "class": 'fade_img',
+            src: "/images/coffeesugar.jpg"
           });
-          return text(' http server template.');
-        });
-        img({
-          "class": 'fade_img',
-          src: "/images/coffeesugar.jpg"
-        });
-        return p({
-          "class": 'credits',
-          style: 'float:right;padding-right:230px;'
-        }, function() {
-          text('created by ');
-          return a({
-            href: 'http://gradus.github.com/'
+          return p({
+            "class": 'credits',
+            style: 'float:right;padding-right:230px;'
           }, function() {
-            return 'Kris Windham';
+            text('created by ');
+            return a({
+              href: 'http://gradus.github.com/'
+            }, function() {
+              return 'Kris Windham';
+            });
           });
         });
-      });
-      return coffeescript(function() {
-        return $(document).ready(function() {
-          $('.black_coffee').hide();
-          $('.little_sugar').hide();
-          $('.text').hide();
-          $('.fade_img').hide();
-          $('.credits').hide();
-          $('.black_coffee').fadeIn(1000);
-          $('.little_sugar').fadeIn(3000);
-          $('.text').fadeIn(4000);
-          $('.fade_img').fadeIn(8000);
-          return $('.credits').fadeIn(10000);
+        script({
+          src: '/javascripts/jquery.min.js'
+        });
+        script({
+          src: 'javascripts/tabs.js'
+        });
+        return coffeescript(function() {
+          return $(document).ready(function() {
+            $('.black_coffee').hide();
+            $('.little_sugar').hide();
+            $('.text').hide();
+            $('.fade_img').hide();
+            $('.credits').hide();
+            $('.black_coffee').fadeIn(1000);
+            $('.little_sugar').fadeIn(3000);
+            $('.text').fadeIn(4000);
+            $('.fade_img').fadeIn(8000);
+            return $('.credits').fadeIn(10000);
+          });
         });
       });
     });

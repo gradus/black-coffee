@@ -44,7 +44,7 @@ app.router.get('/sugar', function() {
 });
 
 app.router.get('/skeleton', function() {
-  return this.res.html(app.render(this.res, sugar, {
+  return this.res.html(app.render(this.res, skeleton, {
     home: '.active'
   }));
 });

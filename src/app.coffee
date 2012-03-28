@@ -19,7 +19,7 @@ skeleton = require view("skeleton")
 
 app.router.get '/', -> @res.html app.render(@res, index, home: '.active')
 app.router.get '/sugar', -> @res.html app.render(@res, sugar, home: '.active')
-app.router.get '/skeleton', -> @res.html app.render(@res, sugar, home: '.active')
+app.router.get '/skeleton', -> @res.html app.render(@res, skeleton, home: '.active')
 
 app.start 3000
 console.log 'listening on port 3000'

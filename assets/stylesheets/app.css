@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+h1,h4 {
+  color:whitesmoke;
+}
+
 #wrap {
   width:500px;
   margin:0px auto;
@@ -15,6 +19,10 @@ body {
 
 a, a:visited, a:hover { 
   color:whitesmoke;
+}
+
+ul.tabs li a  {
+  color: #171717;
 }
 
 p { color: whitesmoke }
