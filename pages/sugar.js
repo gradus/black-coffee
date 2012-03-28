@@ -6,7 +6,7 @@ module.exports = function() {
       title('I like my Coffee With a little Sugar');
       meta({
         name: 'viewport',
-        content: 'width=device-width, initial-scale=0.6, maximum-scale=0.55'
+        content: 'width=device-width, initial-scale=0.7, maximum-scale=1'
       });
       link({
         rel: 'stylesheet',
