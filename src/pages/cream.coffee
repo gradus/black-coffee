@@ -7,7 +7,7 @@ module.exports = ->
     text ' and '
     a href: 'http://http://flatironjs.org/', -> 'Flatiron'
 
-  img height: '300px', class: 'fade_img', src: "/images/coffee_cream.jpg"
+  img class: 'fade_img', src: "/images/coffee_cream.png"
 
   p class: 'credits', style: 'float:left;', ->
     a href: 'http://easydoc.org/blackcoffee', -> 'black-coffee docs'

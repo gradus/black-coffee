@@ -54,7 +54,7 @@ app.router.get('/sugar', function() {
 app.router.get('/cream', function() {
   return this.res.html(app.render(this.res, cream, {
     cream: '.active',
-    css: "app",
+    css: "cream",
     title: "I like my Coffee with a splash of creamer"
   }));
 });

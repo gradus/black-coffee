@@ -23,7 +23,7 @@ app.router.get '/', ->
 app.router.get '/sugar', ->
   @res.html app.render(@res, sugar, sugar: '.active', css: "sugar", title: "I like my Coffee With a little Sugar")
 app.router.get '/cream', ->
-  @res.html app.render(@res, cream, cream: '.active', css: "app", title: "I like my Coffee with a splash of creamer")
+  @res.html app.render(@res, cream, cream: '.active', css: "cream", title: "I like my Coffee with a splash of creamer")
 
 app.router.get '/skeleton', -> @res.html app.render(@res, skeleton)
 

@@ -27,9 +27,8 @@ module.exports = function() {
     });
   });
   img({
-    height: '300px',
     "class": 'fade_img',
-    src: "/images/coffee_cream.jpg"
+    src: "/images/coffee_cream.png"
   });
   p({
     "class": 'credits',

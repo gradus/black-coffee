@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  background-color: whitesmoke;
+  color: #301d00;
+  margin: 30px 30px;
+  padding: 0px;
+  text-align: center;
+}
+
+#wrap {
+  width:500px;
+  margin:0px auto;
+  text-align:left;
+}
+
+h4 {
+  color: #613614;
+}
+
+a, a:visited, a:hover { 
+  color: #613614;
+}
+
+p { color: #774b02 }
+
+ul.tabs li a  {
+  color: #171717;
+}
+
+header, nav, section, footer {
+  display: block
+}
