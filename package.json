@@ -18,7 +18,7 @@
   "dependencies": {
     "flatiron": "0.1.16",
     "union": "0.3.0",
-    "coffeecup": "0.3.6",
+    "coffeecup": "0.3.8",
     "coffeecup-helpers": "0.1.1",
     "creamer": "0.2.0",
     "ecstatic": "0.1.5"
