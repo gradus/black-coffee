@@ -1,5 +1,6 @@
 
 module.exports = function() {
+  stylus('body\n  background-color cornsilk');
   h1({
     "class": 'black_coffee'
   }, function() {

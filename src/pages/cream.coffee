@@ -1,4 +1,8 @@
 module.exports = ->
+  stylus '''
+    body
+      background-color cornsilk
+  '''
   h1 class: 'black_coffee', -> 'Black Coffee'
   h4 class: 'like_it_with_cream', -> '"sometimes with a splash of cream"'
   p class: 'text', ->

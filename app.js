@@ -1,6 +1,4 @@
-var app, coffeecup, cream, creamer, ecstatic, flatiron, index, skeleton, sugar, view;
-
-coffeecup = require('coffeecup');
+var app, creamer, ecstatic, flatiron;
 
 creamer = require('creamer');
 
@@ -12,6 +10,11 @@ app = flatiron.app;
 
 app.use(flatiron.plugins.http);
 
+app.use(creamer, {
+  views: __dirname + '/pages',
+  layout: require(__dirname + '/pages/layout')
+});
+
 app.http.before = [
   ecstatic(__dirname + '/assets', {
     autoIndex: false,
@@ -19,24 +22,8 @@ app.http.before = [
   })
 ];
 
-app.use(creamer, {
-  layout: require(__dirname + '/pages/layout')
-});
-
-view = function(name) {
-  return "" + __dirname + "/pages/" + name;
-};
-
-index = require(view("index"));
-
-sugar = require(view("sugar"));
-
-cream = require(view("cream"));
-
-skeleton = require(view("skeleton"));
-
 app.router.get('/', function() {
-  return this.res.html(app.render(this.res, index, {
+  return this.res.html(this.bind('index', {
     black: '.active',
     css: "app",
     title: "I like my Coffee Black"
@@ -44,7 +31,7 @@ app.router.get('/', function() {
 });
 
 app.router.get('/sugar', function() {
-  return this.res.html(app.render(this.res, sugar, {
+  return this.res.html(this.bind('sugar', {
     sugar: '.active',
     css: "sugar",
     title: "I like my Coffee With a little Sugar"
@@ -52,7 +39,7 @@ app.router.get('/sugar', function() {
 });
 
 app.router.get('/cream', function() {
-  return this.res.html(app.render(this.res, cream, {
+  return this.res.html(this.bind('cream', {
     cream: '.active',
     css: "cream",
     title: "I like my Coffee with a splash of creamer"
@@ -60,7 +47,7 @@ app.router.get('/cream', function() {
 });
 
 app.router.get('/skeleton', function() {
-  return this.res.html(app.render(this.res, skeleton));
+  return this.res.html(this.bind('skeleton'));
 });
 
 app.start(3000);
