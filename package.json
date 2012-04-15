@@ -2,7 +2,7 @@
   "author": "Kris Windham <kriswindham@gmail.com> (http://krwindham.nodejitsu.com)",
   "name": "black-coffee",
   "description": "A flatiron coffee-script template",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/gradus/black-coffee.git"
@@ -17,14 +17,13 @@
   },
   "dependencies": {
     "union": "0.3.0",
-    "coffeecup": "0.3.10",
     "coffeecup-helpers": "0.1.1",
-    "ecstatic": "0.1.5"
+    "ecstatic": "0.1.5",
+    "creamer": "~0.3.1",
+    "coffeecup": "~0.3.10",
+    "flatiron": "https://github.com/twilson63/flatiron/tarball/master"
+
   },
-  "bundledDependencies": [
-    "flatiron",
-    "creamer"
-  ],
   "devDependencies": {
     "mocha": "0.12.1",
     "should": "0.5.1",
