@@ -16,13 +16,15 @@
     "node": "0.4 || 0.6 || 0.7 || 0.8"
   },
   "dependencies": {
-    "flatiron": "https://github.com/twilson63/flatiron/tarball/master",
     "union": "0.3.0",
-    "coffeecup": "0.3.9",
+    "coffeecup": "0.3.10",
     "coffeecup-helpers": "0.1.1",
-    "creamer": "https://github.com/gradus/creamer/tarball/master",
     "ecstatic": "0.1.5"
   },
+  "bundledDependencies": [
+    "flatiron",
+    "creamer"
+  ],
   "devDependencies": {
     "mocha": "0.12.1",
     "should": "0.5.1",
@@ -30,4 +32,3 @@
   },
   "subdomain": "black-coffee"
 }
-
