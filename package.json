@@ -20,7 +20,7 @@
     "coffeecup-helpers": "0.1.1",
     "ecstatic": "0.1.5",
     "creamer": "~0.3.1",
-    "coffeecup": "~0.3.10",
+    "coffeecup": "https://github.com/gradus/coffeecup/tarball/master",
     "flatiron": "https://github.com/twilson63/flatiron/tarball/master"
 
   },
@@ -31,3 +31,4 @@
   },
   "subdomain": "black-coffee"
 }
+
