@@ -19,7 +19,7 @@
     "union": "0.3.0",
     "coffeecup-helpers": "0.1.1",
     "ecstatic": "0.1.5",
-    "creamer": "~0.3.1",
+    "creamer": "https://github.com/gradus/creamer/tarball/master",
     "coffeecup": "https://github.com/gradus/coffeecup/tarball/master",
     "flatiron": "https://github.com/twilson63/flatiron/tarball/master"
 
