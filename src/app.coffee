@@ -10,7 +10,7 @@ app.use creamer,
   layout: require __dirname + '/pages/layout'
 
 app.http.before = [
-  ecstatic(__dirname + '/assets', { autoIndex : off, cache: on })
+  ecstatic(__dirname + '/../assets', { autoIndex : off, cache: on })
 ]
 
 app.router.get '/', ->
