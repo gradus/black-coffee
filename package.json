@@ -20,7 +20,8 @@
     "coffeecup": "https://github.com/gradus/coffeecup/tarball/master",
     "union": "0.3.0",
     "coffeecup-helpers": "0.1.1",
-    "ecstatic": "0.1.5"
+    "ecstatic": "0.1.5",
+    "flatiron": "*"
   },
   "bundledDependencies": [
     "flatiron"
