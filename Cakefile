@@ -11,10 +11,10 @@ fs = require 'fs'
 {spawn, exec} = require 'child_process'
 
 # ANSI Terminal Colors
-bold = ''
-green = ''
-reset = ''
-red = ''
+bold = `'\033[0;1m'`
+green = `'\033[0;32m'`
+reset = `'\033[0m'`
+red = `'\033[0;31m'`
 
 # Internal Functions
 #
